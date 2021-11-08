@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/AWSCodeDeployments/WPwithVeenTheme_sourcecode
+hooks:
+  AfterInstall:
+    - location: deployment-scripts/copy-files.sh
+      timeout: 900
+      runas: root
+    - location: deployment-scripts/set-permissions.sh
+      timeout: 900
+      runas: root
+
+
+
