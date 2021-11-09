@@ -6,7 +6,7 @@ files:
 hooks:
   AfterInstall:
     - location: deployment-scripts/copy-files.sh
-      timeout: 900
+      timeout: 1800
       runas: root
     - location: deployment-scripts/set-permissions.sh
       timeout: 900
